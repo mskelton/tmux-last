@@ -20,10 +20,10 @@ set -g @tmux-last-command-key t
 
 ### @tmux-last-prompt-pattern
 
-A regexp to identify command separator. Usually a prompt. For example, if set to '] % ', the plugin will capture the latest output up until the first line that contains '] % '.
+A regex pattern to identify command separator. Defaults to `$`.
 
 ```tmux
-set -g @tmux-last-prompt-pattern '] % '
+set -g @tmux-last-prompt-pattern '> '
 ```
 
 ### @tmux-last-prompt-lines
