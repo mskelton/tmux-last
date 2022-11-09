@@ -10,6 +10,14 @@ set -g @plugin 'mskelton/tmux-last'
 
 ## Configuration
 
+### @tmux-last-prompt-pattern
+
+A regex pattern to identify command separator. Required.
+
+```tmux
+set -g @tmux-last-prompt-pattern '> '
+```
+
 ### @tmux-last-command-key
 
 Set's the key that should be bound to open the last command output. Defaults to `t`.
@@ -18,20 +26,12 @@ Set's the key that should be bound to open the last command output. Defaults to 
 set -g @tmux-last-command-key t
 ```
 
-### @tmux-last-prompt-pattern
-
-A regex pattern to identify command separator. Defaults to `$`.
-
-```tmux
-set -g @tmux-last-prompt-pattern '> '
-```
-
 ### @tmux-last-prompt-lines
 
 The number of lines consumed by the prompt. If your prompt takes up two lines, you could set this to `2`. Defaults to `1`.
 
 ```tmux
-set -g @tmux-last-prompt-pattern 1
+set -g @tmux-last-prompt-lines 1
 ```
 
 ### @tmux-last-pager
