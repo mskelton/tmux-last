@@ -12,16 +12,13 @@ result=$(
 	echo "$contents" |
 		tail -r |
 		awk "
-      BEGIN {found=false}
+      BEGIN {found=0}
       {
         if (match(\$0, /$PROMPT_PATTERN/)) {
-          # Finish processing when the prompt following the first non-empty
-          # command is reached.
-          if (found) { nextfile }
-          # Skip additional prompt lines
+          if (found != 0) { nextfile }
           else { for (i=1; i < $PROMPT_LINES; i++) { getline; next } }
         } else {
-          found=true
+          found=1
           print \$0
         }
       }
