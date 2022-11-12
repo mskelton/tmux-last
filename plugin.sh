@@ -2,7 +2,7 @@
 
 # Get the custom page or use the default system pager as a fallback
 PAGER_CMD=${PAGER_CMD:-"$PAGER"}
-PAGER_CMD=${PAGER:-less}
+PAGER_CMD=${PAGER_CMD:-less}
 
 # Allow prompts with more than one line
 PROMPT_LINES=${PROMPT_LINES:-1}
