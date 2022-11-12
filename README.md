@@ -18,12 +18,12 @@ A regex pattern to identify command separator. Required.
 set -g @tmux-last-prompt-pattern '> '
 ```
 
-### @tmux-last-command-key
+### @tmux-last-key
 
-Set's the key that should be bound to open the last command output. Defaults to `t`.
+The key that should be bound to open the last command output. Defaults to `t`.
 
 ```tmux
-set -g @tmux-last-command-key t
+set -g @tmux-last-key t
 ```
 
 ### @tmux-last-prompt-lines

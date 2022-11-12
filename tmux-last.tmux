@@ -2,7 +2,7 @@
 
 CURRENT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
-KEY=$(tmux show-option -gqv @tmux-last-capture-key)
+KEY=$(tmux show-option -gqv @tmux-last-key)
 KEY=${KEY:-t}
 
 PROMPT_PATTERN=$(tmux show-option -gqv @tmux-last-prompt-pattern)
