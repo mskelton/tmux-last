@@ -4,6 +4,8 @@ Tmux plugin to open the last non-empty command output in a pager.
 
 ## Installation
 
+To install with [tpm](https://github.com/tmux-plugins/tpm), add the following to your Tmux configuration file.
+
 ```tmux
 set -g @plugin 'mskelton/tmux-last'
 ```
