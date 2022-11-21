@@ -49,6 +49,6 @@ set -g @tmux-last-pager 'less'
 When enabled, enables colorized output by passing escape codes to the pager. To use this, you may need to update `@tmux-last-pager` so your pager command accepts escape codes.
 
 ```tmux
-set -g @tmux-last-key on
+set -g @tmux-last-color on
 set -g @tmux-last-pager 'less -r'
 ```
