@@ -2,12 +2,18 @@
 
 # Get the custom page or use the default system pager as a fallback
 PAGER_CMD=${PAGER_CMD:-"$PAGER"}
-PAGER_CMD=${PAGER_CMD:-"less -r"}
+PAGER_CMD=${PAGER_CMD:-less}
 
 # Allow prompts with more than one line
 PROMPT_LINES=${PROMPT_LINES:-1}
 
-contents=$(tmux capture-pane -epJ -S '-' -t !)
+# Pass escape codes if color is enabled
+ESCAPE=''
+if [[ "$COLOR" == 'on' ]]; then
+	ESCAPE='-e'
+fi
+
+contents=$(tmux capture-pane $ESCAPE -pJ -S '-' -t 1)
 result=$(
 	echo "$contents" |
 		tail -r |

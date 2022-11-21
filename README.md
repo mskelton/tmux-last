@@ -41,5 +41,14 @@ set -g @tmux-last-prompt-lines 1
 The pager to use for the captured output. Defaults to `$PAGER`.
 
 ```tmux
-set -g @tmux-last-pager less
+set -g @tmux-last-pager 'less'
+```
+
+### @tmux-last-color
+
+When enabled, enables colorized output by passing escape codes to the pager. To use this, you may need to update `@tmux-last-pager` so your pager command accepts escape codes.
+
+```tmux
+set -g @tmux-last-key on
+set -g @tmux-last-pager 'less -r'
 ```
