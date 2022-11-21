@@ -13,7 +13,7 @@ if [[ "$COLOR" == 'on' ]]; then
 	ESCAPE='-e'
 fi
 
-contents=$(tmux capture-pane $ESCAPE -pJ -S '-' -t 1)
+contents=$(tmux capture-pane $ESCAPE -pJ -S '-' -t !)
 result=$(
 	echo "$contents" |
 		tail -r |
